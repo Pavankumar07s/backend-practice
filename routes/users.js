@@ -11,4 +11,16 @@ let userSchema=mongoose.Schema({
   age:Number,
 });
 
-module.exports=mongoose.model("user",userSchema);//collection banata hai and aage wale naam se banega collection
+let employeSchema=mongoose.Schema({
+  name:String,
+  Place:String,
+  dateOfBIrst:Number,
+})
+
+let tour=mongoose.Schema({
+  place:String,
+  name:String
+})
+module.exports=mongoose.model("user",userSchema);//collection banata hai and aage wale naam se banega 
+module.exports=mongoose.model("Employe",employeSchema)
+module.exports=mongoose.model("tour",tour)
